@@ -1,0 +1,19 @@
+{
+  "name": "my-web-front",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/yurykovshov/my-web-front.svg?branch=master)](https://travis-ci.org/yurykovshov/my-web-front)",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yurykovshov/my-web-front.git"
+  },
+  "author": "Yury Kovshov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yurykovshov/my-web-front/issues"
+  },
+  "homepage": "https://github.com/yurykovshov/my-web-front#readme"
+}
