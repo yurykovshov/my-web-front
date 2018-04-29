@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/yurykovshov/my-web-front/issues"
   },
-  "homepage": "https://github.com/yurykovshov/my-web-front#readme"
+  "homepage": "https://github.com/yurykovshov/my-web-front#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-sass": "^4.0.1"
+  }
 }
