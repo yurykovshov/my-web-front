@@ -1,7 +1,36 @@
 html, body {
-    background: $color-back-default;
-    color: $color-text-default;
+    background: $color-grey;
+    color: $color-white;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: normal;
+}
+
+.header {
+    height: 72px;
+    background: $color-black;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+
+    &__title {
+        margin-right: 128px;
+    }
+
+    &__sitemap {
+        @include ul-reset();
+        display: flex;
+        font-size: 18px;
+        li {
+            margin-right: 40px;
+            color: $color-grey;
+        }
+    }
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    margin: 0;
 }

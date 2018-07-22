@@ -390,8 +390,35 @@ template {
   display: none; }
 
 html, body {
-  background: #2a2b2e;
+  background: #39393a;
   color: #fdfffc;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: normal; }
+
+.header {
+  height: 72px;
+  background: #2a2b2e;
+  display: flex;
+  align-items: center;
+  padding: 0 24px; }
+  .header__title {
+    margin-right: 128px; }
+  .header__sitemap {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-size: 18px; }
+    .header__sitemap li {
+      padding: 0;
+      margin: 0; }
+    .header__sitemap li {
+      margin-right: 40px;
+      color: #39393a; }
+
+h1 {
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  margin: 0; }

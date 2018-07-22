@@ -13,8 +13,11 @@ gulp.task('css-min', function(){
         .pipe(minifyCSS())
         .pipe(gulp.dest('build/css'))
 });
-  
  
+gulp.task('watch', function(){
+    gulp.watch('sass/**/*.scss', ['sass']); 
+});
+
 gulp.task('default', [ 'sass' ]);
 
 gulp.task('release', [ 'sass', 'css-min' ]);
