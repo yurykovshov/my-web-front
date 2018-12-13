@@ -19,7 +19,7 @@ type alias Model =
 init : Session -> ( Model, Cmd Msg )
 init session =
     ( { session = session
-      , pageTitle = "Shelter"
+      , pageTitle = "Home"
       , pageBody = "This is the home page"
       }
     , Cmd.none
