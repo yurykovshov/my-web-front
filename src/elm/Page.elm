@@ -1,7 +1,7 @@
 module Page exposing (Page(..), view)
 
 import Browser exposing (Document)
-import Html exposing (Html, a, button, div, footer, i, img, li, nav, p, span, text, ul, header, h1, main_)
+import Html exposing (Html, a, button, div, footer, h1, header, i, img, li, main_, nav, p, span, text, ul)
 import Html.Attributes exposing (class, classList, href, style)
 import Html.Events exposing (onClick)
 import Route exposing (Route)
@@ -43,32 +43,35 @@ view page { title, content } =
 viewHeader : Page -> Html msg
 viewHeader page =
     header [ class "header" ]
-    [ h1 [ class "header__title" ]
-        [ text "Yury Kovshov" ]
-    , ul [ class "header__sitemap" ]
-        [ li []
-            [ text "Summary" ]
-        , li []
-            [ text "Travel" ]
-        , li []
-            [ text "Software development" ]
-        , li []
-            [ text "Sport" ]
-        , li []
-            [ text "Music" ]
-        , li []
-            [ text "Life hacking" ]
+        [ h1 [ class "header__title" ]
+            [ text "Yury Kovshov" ]
+        , ul [ class "header__sitemap" ]
+            [ li []
+                [ text "Summary" ]
+            , li []
+                [ text "Travel" ]
+            , li []
+                [ text "Software development" ]
+            , li []
+                [ text "Sport" ]
+            , li []
+                [ text "Music" ]
+            , li []
+                [ text "Life hacking" ]
+            ]
         ]
-    ]
-    -- nav [ class "navbar navbar-expand-lg navbar-light bg-light" ]
-    --     [ div [ class "container" ]
-    --         [ a [ class "navbar-brand", Route.href Route.Home ]
-    --             [ text "ElmSPA" ]
-    --         , ul [ class "nav navbar-nav pull-xs-right" ] <|
-    --             navbarLink page Route.Home [ text "Home" ]
-    --                 :: viewMenu page
-    --         ]
-    --     ]
+
+
+
+-- nav [ class "navbar navbar-expand-lg navbar-light bg-light" ]
+--     [ div [ class "container" ]
+--         [ a [ class "navbar-brand", Route.href Route.Home ]
+--             [ text "ElmSPA" ]
+--         , ul [ class "nav navbar-nav pull-xs-right" ] <|
+--             navbarLink page Route.Home [ text "Home" ]
+--                 :: viewMenu page
+--         ]
+--     ]
 
 
 viewMenu : Page -> List (Html msg)
