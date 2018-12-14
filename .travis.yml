@@ -38,6 +38,9 @@ install:
 script:
   - elm-format --validate .
   - yarn prod
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t yurykovshov/my-web-front .
-  - docker push yurykovshov/my-web-front
+  - if [ branch = master ];
+    then
+      echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+      docker build -t yurykovshov/my-web-front .
+      docker push yurykovshov/my-web-front
+    fi
