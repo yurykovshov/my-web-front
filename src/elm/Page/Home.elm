@@ -1,7 +1,7 @@
 module Page.Home exposing (Model, Msg, init, subscriptions, toSession, update, view)
 
-import Html exposing (Html, div, h2, text)
-import Html.Attributes exposing (class)
+import Html exposing (..)
+import Html.Attributes exposing (..)
 import Session exposing (Session)
 
 
@@ -33,7 +33,11 @@ init session =
 view : Model -> { title : String, content : Html Msg }
 view model =
     { title = model.pageTitle
-    , content = div [] []
+    , content =
+        div []
+            [ iframe [ src "https://snapwidget.com/embed/636434", class "snapwidget-widget", style "background-color" "transparent", style "border" "none", style "overflow" "hidden", style "width" "100%" ]
+                []
+            ]
     }
 
 
