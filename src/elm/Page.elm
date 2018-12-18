@@ -47,7 +47,7 @@ viewHeader page =
             [ text "Yury Kovshov" ]
         , ul [ class "header__sitemap" ]
             [ li []
-                [ text "Summary" ]
+                [ text "Timeline" ]
             , li []
                 [ text "Travel" ]
             , li []
