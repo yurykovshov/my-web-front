@@ -1,36 +1,47 @@
-html, body {
-    background: $color-grey;
-    color: $color-white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: normal;
+html,
+body {
+  background: $color-grey;
+  color: $color-white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: normal;
 }
 
 .header {
-    height: 72px;
-    background: $color-black;
+  height: 72px;
+  background: $color-black;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+
+  &__title {
+    margin-right: 128px;
+  }
+
+  &__sitemap {
+    @include ul-reset();
     display: flex;
-    align-items: center;
-    padding: 0 24px;
+    font-size: 18px;
 
-    &__title {
-        margin-right: 128px;
+    li {
+      margin-right: 40px;
+      color: $color-grey;
+
+      &.active {
+        color: #fff;
+      }
     }
 
-    &__sitemap {
-        @include ul-reset();
-        display: flex;
-        font-size: 18px;
-        li {
-            margin-right: 40px;
-            color: $color-grey;
-        }
-    }
+  }
 }
 
 h1 {
-    font-size: 24px;
-    font-weight: normal;
-    letter-spacing: 0.5px;
-    margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+a {
+  color: #fff;
 }

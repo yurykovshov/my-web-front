@@ -45,20 +45,19 @@ viewHeader page =
     header [ class "header" ]
         [ h1 [ class "header__title" ]
             [ text "Yury Kovshov" ]
-        , ul [ class "header__sitemap" ]
-            [ li []
-                [ text "Timeline" ]
-            , li []
-                [ text "Travel" ]
-            , li []
-                [ text "Software development" ]
-            , li []
-                [ text "Sport" ]
-            , li []
-                [ text "Music" ]
-            , li []
-                [ text "Life hacking" ]
-            ]
+        , ul [ class "header__sitemap" ] <|
+            navbarLink2 page Route.Home [ text "Timeline" ]
+                :: [ li []
+                        [ text "Travels" ]
+                   , li []
+                        [ text "Software development" ]
+                   , li []
+                        [ text "Sport" ]
+                   , li []
+                        [ text "Music" ]
+                   , li []
+                        [ text "Life hacking" ]
+                   ]
         ]
 
 
@@ -74,16 +73,6 @@ viewHeader page =
 --     ]
 
 
-viewMenu : Page -> List (Html msg)
-viewMenu page =
-    let
-        linkTo =
-            navbarLink page
-    in
-    [ linkTo Route.About [ text "About" ]
-    ]
-
-
 viewFooter : Html msg
 viewFooter =
     footer []
@@ -91,10 +80,15 @@ viewFooter =
         ]
 
 
-navbarLink : Page -> Route -> List (Html msg) -> Html msg
-navbarLink page route linkContent =
-    li [ classList [ ( "nav-item", True ), ( "active", isActive page route ) ] ]
-        [ a [ class "nav-link", Route.href route ] linkContent ]
+navbarLink2 : Page -> Route -> List (Html msg) -> Html msg
+navbarLink2 page route linkContent =
+    li [ classList [ ( "active", isActive page route ) ] ]
+        [ if isActive page route then
+            span [] linkContent
+
+          else
+            a [ Route.href route ] linkContent
+        ]
 
 
 isActive : Page -> Route -> Bool
