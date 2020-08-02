@@ -35,8 +35,7 @@ view model =
     { title = model.pageTitle
     , content =
         div []
-            [ iframe [ src "https://snapwidget.com/embed/636434", class "snapwidget-widget", style "background-color" "transparent", style "border" "none", style "overflow" "hidden", style "width" "100%" ]
-                []
+            [ 
             ]
     }
 
